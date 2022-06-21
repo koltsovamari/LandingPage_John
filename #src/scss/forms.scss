@@ -1,0 +1,43 @@
+@import 'default_variables.scss';
+
+.form {
+    &_row {}
+
+    &_column {}
+
+    &_line {}
+
+    &_input {}
+
+    &_button {}
+
+    &_error {}
+}
+
+.btn {
+    display: inline-flex;
+    padding: 0px 20px;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 47px;
+    background-color: $colorCoral;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(29 / 20) * 100%;
+    color: #FFFFFF;
+
+    transition: background-color 0.5s ease 0s;
+
+    @media (min-width: $md2) {
+        &:hover {
+            background-color: $colorCoralHover;
+        }
+    }
+
+    &._fw {
+        width: 100%;
+    }
+}

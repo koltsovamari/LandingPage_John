@@ -1,0 +1,136 @@
+@import 'default_variables.scss';
+
+.hello {
+    padding: 38px 0px 71px 0px;
+
+    &_container {
+        display: flex;
+    }
+
+    &_content {
+        align-items: flex-start;
+        padding: 18px 110px 0px 0px;
+        flex: 1 1 auto;
+
+        *:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &_title {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &_text {
+        margin: 0px 0px 38px 0px;
+    }
+
+    &_btn {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &_avatar {
+        flex: 0 0 243px;
+        height: 243px;
+        width: 243px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: -5px 13px 0px 0px $colorLightBlue;
+
+        img {
+            // max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+// --------------------------
+
+.posts {
+    background-color: $colorLightBlue;
+    padding: 27px 0px 13px 0px;
+
+    *:last-child {
+        margin-bottom: 0px;
+    }
+
+    &_header {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 22px 0px;
+    }
+
+    &_title {
+        padding: 0px 20px 0px 0px;
+        flex: 1 1 auto;
+    }
+
+    &_wiew-all {
+        flex: 0 0 auto;
+        font-size: 16px;
+        line-height: 24px;
+        color: #00A8CC;
+    }
+
+    &_items {
+        margin: 0px -10px;
+    }
+
+    &_column {
+        flex: 0 1 50%;
+        padding: 0px 10px;
+    }
+}
+
+.item-post {
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+    border-radius: 4px;
+    padding: 23px;
+
+    &_title {
+        display: inline-block;
+        color: $colorDarkBlue;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: calc(38/26)*100%;
+        transition: all 0.5s ease 0s;
+
+        margin: 0px 0px 19px 0px;
+
+        &:hover {
+            color: $colorCoralHover;
+        }
+    }
+
+    &_info {
+        font-size: 18px;
+        line-height: calc(26/18) *100%;
+
+        margin: 0px 0px 15px 0px;
+
+        span {
+            margin: 0px 25px;
+        }
+    }
+
+    &_text {
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+// --------------------------
+
+.works {
+    padding: 15px 0px 83px 0px;
+
+    &_title {
+        margin: 0px 0px 22px 0px
+    }
+}
+
+
+// --------------------------
+
+@import 'adaptive.scss';

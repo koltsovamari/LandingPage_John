@@ -1,0 +1,98 @@
+@import 'default_variables.scss';
+
+.header {
+    position: relative;
+    z-index: 100;
+
+    &_content {
+        max-width: 1052px;
+        padding: 0px 10px;
+        margin: 0 auto;
+    }
+
+    &_menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 82px;
+        padding: 10px 0;
+    }
+}
+
+.menu {
+
+    &_list {
+        li {
+            margin: 0px 0px 20px 0px;
+
+            &:last-child {
+                margin: 0px;
+            }
+        }
+    }
+
+    &_link {
+        font-weight: 500;
+        font-size: 20px;
+        color: #000;
+        transition: color 0.5s ease 0s;
+
+        &._active {
+            color: $colorCoral;
+        }
+
+        &:hover {
+            color: $colorCoral;
+        }
+    }
+}
+
+.icon_menu {
+    display: none;
+
+    @media (max-width: $md3) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+
+        span {
+            transition: all 0.3s ease 0s;
+            top: calc(50% - 1px);
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+
+            &:first-child {
+                top: 0px;
+            }
+
+            &:last-child {
+                top: auto;
+                bottom: 0px;
+            }
+        }
+
+        &._active {
+            span {
+                transform: scale(0);
+
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top: calc(50% - 1px);
+                }
+
+                &:last-child {
+                    transform: rotate(45deg);
+                    bottom: calc(50% - 1px);
+                }
+            }
+        }
+    }
+}
+
+@import 'adaptive.scss';

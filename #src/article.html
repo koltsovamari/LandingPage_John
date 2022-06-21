@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+'title':'Article'
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{
+        "link":"1"
+        })
+        <main class="page">
+            <div class="article article_padding">
+                <div class="article_container">
+                    <h1 class="article_header title">Designing Dashboards with usability in mind</h1>
+                    <div class="article_info">
+                        <div class="article_year">2020</div>
+                        <div class="article_category">Dashboard, User Experience Design</div>
+                    </div>
+                    <div class="article_text">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                            amet.
+                        </p>
+                        <img src="@img/article/01.jpg" alt="">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+                            amet.
+                        </p>
+                        <img src="@img/article/02.jpg" alt="">
+                        <img src="@img/article/03.jpg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        @@include('html/footer.html',{})
+    </div>
+
+    @@include('html/js.html',{})
+</body>
+
+</html>

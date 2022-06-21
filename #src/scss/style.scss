@@ -1,0 +1,126 @@
+@import 'nullstyle.scss';
+@import 'default_variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'icons.scss';
+@import 'adaptive.scss';
+
+@import 'header.scss';
+@import 'home.scss';
+@import 'works.scss';
+@import 'article.scss';
+@import 'blog.scss';
+
+@import 'footer.scss';
+
+@import 'forms.scss';
+@import 'icons.scss';
+
+body {
+    font-family: $fontfamily;
+    color: $colorDarkBlue;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+.page {
+    padding: 90px 0px 0px 0px;
+    flex: 1 1 auto;
+
+    @media (max-width: $md3) {
+        padding: 30px 0px 0px 0px;
+    }
+}
+
+._container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+}
+
+// -------------------------
+._ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+body.ie {
+    ._ibg {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        img {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+
+// -------------------------
+
+.title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: calc(60/44) *100%;
+
+    @media (max-width: $md3) {
+        font-size: 32px;
+    }
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24/16) *100%;
+}
+
+.title-block {
+    font-size: 22px;
+    line-height: calc(60/22)*100%;
+
+    @media (max-width: $md4) {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+// -------------------------
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_item {
+        font-size: 30px;
+        color: $colorDarkBlue;
+        margin: 0px 17px;
+        transition: color 0.5s ease 0s;
+
+        &:hover {
+            color: $colorCoral;
+        }
+    }
+}

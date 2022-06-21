@@ -1,0 +1,290 @@
+@import 'default_variables.scss';
+
+._container {
+    // @media (max-width: $md1) {
+    //     max-width: 970px;
+    // }
+
+    @media (max-width: $md1) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $md2) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+// menu
+
+.header {
+    &_menu {
+        @media (max-width: $md3) {
+            height: 50px;
+        }
+    }
+}
+
+.menu {
+
+    &_body {
+        @media (max-width: $md3) {
+            transform: translate(0px, -100%);
+            transition: transform 0.5s ease 0s;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            overflow: auto;
+            padding: 60px 10px 30px 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+
+            &._active {
+                transform: translate(0px, 0%);
+            }
+        }
+    }
+
+    &_list {
+        @media (min-width: $md3) {
+            display: flex;
+
+            li {
+                margin: 0px 33px 0px 0px;
+            }
+        }
+
+        @media (max-width: $md4) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &_link {
+        @media (max-width: $md3) {
+            font-size: 40px;
+            display: block;
+        }
+    }
+}
+
+// home
+
+.hello {
+    @media (max-width: $md1) {
+        padding: 0px 0px 71px 0px;
+    }
+
+    @media (max-width: $md3) {
+        padding: 0px 0px 60px 0px;
+    }
+
+    &_container {
+        @media (max-width: $md3) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column-reverse;
+
+        }
+    }
+
+    &_content {
+        @media (max-width: $md1) {
+            padding: 18px 50px 0px 0px;
+        }
+
+        @media (max-width: $md3) {
+            padding: 0px 15px;
+        }
+    }
+
+    &_avatar {
+        @media (max-width: $md3) {
+            flex: 0 0 170px;
+            height: 170px;
+            width: 170px;
+            margin: 0px 0px 40px 0px;
+        }
+    }
+
+    &_title {
+        @media (max-width: $md3) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &_text {
+        @media (max-width: $md3) {
+            margin: 0px 0px 25px 0px;
+        }
+    }
+
+    &_btn {
+        @media (max-width: $md3) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+}
+
+.posts {
+    @media (max-width: $md3) {
+        padding: 27px 0px 23px 0px;
+    }
+
+    &_wiew-all {
+        @media (max-width: $md4) {
+            display: none;
+        }
+    }
+
+    &_items {
+        @media (min-width: $md3) {
+            display: flex;
+        }
+    }
+
+    &_column {
+        @media (max-width: $md3) {
+            margin: 0px 0px 17px 0px;
+        }
+    }
+}
+
+.item-post {
+    @media (max-width: $md3) {
+        padding: 23px;
+    }
+
+    &_title {
+        @media (max-width: $md3) {
+            font-size: 22px 15px;
+        }
+    }
+
+    &_info {
+        @media (max-width: $md3) {
+            font-size: 16px;
+
+            span {
+                margin: 0px 15px;
+            }
+        }
+    }
+}
+
+.works {
+    @media (max-width: $md3) {
+        padding: 15px 0px 30px 0px;
+    }
+
+    &_swipe {
+        @media (max-width: $md3) {
+            display: flex;
+            overflow: auto;
+        }
+
+        .works-block {
+            &_item {
+                flex: 0 0 90%;
+                margin: 0px 20px 0px 0px;
+            }
+        }
+    }
+}
+
+.works-block {
+    &_item {
+        @media (min-width: $md3) {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    &_image {
+        @media (max-width: $md3) {
+            margin: 0px 0px 17px 0px;
+            padding: 0px 0px 60% 0px;
+        }
+    }
+
+    &_body {
+        @media (min-width: $md3) {
+            padding: 0px 0px 0px 18px;
+        }
+    }
+
+    &_title {
+        @media (max-width: $md4) {
+            font-size: 24px;
+        }
+    }
+
+    &_year,
+    &_category {
+        @media (max-width: $md4) {
+            font-size: 16px;
+        }
+    }
+}
+
+.works_header {
+    @media (max-width: $md3) {
+        margin: 0px 0px 25px 0px
+    }
+}
+
+// blog
+
+.blog {
+    &_header {
+        @media (max-width: $md3) {
+            margin: 0px 0px 25px 0px
+        }
+    }
+
+    &_title {
+        @media (max-width: $md3) {
+            font-size: 26px;
+        }
+
+    }
+
+    &_item {
+        @media (max-width: $md3) {
+            padding: 20px 0px 20px 0px;
+        }
+    }
+
+    &_info {
+        @media (max-width: $md3) {
+            font-size: 16px;
+        }
+    }
+}
+
+//acticle
+
+.article {
+    &_header {
+        @media (max-width: $md3) {
+            font-size: 30px;
+        }
+    }
+
+    &_text {
+        p {
+            @media (max-width: $md3) {
+                margin: 0px 0px 30px 0px;
+            }
+        }
+
+        img {
+            @media (max-width: $md3) {
+                margin: 0px 0px 18px 0px;
+            }
+        }
+    }
+}
